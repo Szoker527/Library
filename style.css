@@ -1,0 +1,52 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+
+h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+main {
+    grid-column: 1 / -1;
+    grid-row: 2 / 6;
+    background-color: gray;
+    display: grid;
+    grid-template-columns: 50px repeat(4, 1fr) 50px;
+}
+
+
+.display-library {
+    background-color: gray;
+    grid-column: 2 / -2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+    #book {
+        background-color: white;
+        padding: 25px 60px;
+    }
+
+    .input-book {
+        display: flex;
+        margin-bottom: 10px;
+        justify-content: space-between;
+    }
+
+    .added-book {
+        background-color: beige;
+        
+    }
