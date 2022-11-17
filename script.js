@@ -2,7 +2,7 @@ const inputBook = document.querySelectorAll(".input-book input");
 const formButton = document.getElementById("submit");
 const testButton = document.getElementById("test");
 const showInput = document.querySelectorAll(".book-card");
-const displayBook = document.querySelector(".added-book");
+const displayBook = document.querySelector(".display-library");
 const array = [];
 
 let title;
@@ -72,6 +72,7 @@ testButton.addEventListener("click", () => {
 
 function createBook(book) {
     const newBook = document.createElement("div");
+    newBook.classList.add("added-book");
     const newTitle = document.createElement("div");
     const newAuthor = document.createElement("div");
     const newPages = document.createElement("div");
