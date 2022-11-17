@@ -1,8 +1,8 @@
 const inputBook = document.querySelectorAll(".input-book input");
 const formButton = document.getElementById("submit");
 const testButton = document.getElementById("test");
-const showBook = document.querySelector(".title");
 const showInput = document.querySelectorAll(".book-card");
+const displayBook = document.querySelector(".added-book");
 const array = [];
 
 let title;
@@ -45,7 +45,6 @@ function Book(title, author, pages, isread) {
 function addBookToLibrary(title, author, pages, isread) {
     myLibrary.push( new Book(title, author, pages, isread))
     console.log(myLibrary)
-    showBook.textContent = "WOW";
   // do stuff here
 }
 
@@ -54,7 +53,36 @@ function showBookArray(myLibrary) {
 }
 
 testButton.addEventListener("click", () => {
+    // const newBook = document.createElement("div");
+    // const newTitle = document.createElement("div");
+    // const newAuthor = document.createElement("div");
+    // const newPages = document.createElement("div");
+    // const newIsRead = document.createElement("div");
+    let i = 0
     myLibrary.forEach(book => {
         console.log(book)
+        createBook(book)
     })
+    // newBook.appendChild(newTitle)
+    // newBook.appendChild(newAuthor)
+    // newBook.appendChild(newPages)
+    // newBook.appendChild(newIsRead)
+    // displayBook.appendChild(newBook)
 })
+
+function createBook(book) {
+    const newBook = document.createElement("div");
+    const newTitle = document.createElement("div");
+    const newAuthor = document.createElement("div");
+    const newPages = document.createElement("div");
+    const newIsRead = document.createElement("div");
+    newTitle.textContent = book.title;
+    newAuthor.textContent = book.author;
+    newPages.textContent = book.pages;
+    newIsRead.textContent = book.isread;
+    newBook.appendChild(newTitle)
+    newBook.appendChild(newAuthor)
+    newBook.appendChild(newPages)
+    newBook.appendChild(newIsRead)
+    displayBook.appendChild(newBook)
+}
