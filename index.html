@@ -9,9 +9,13 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Library</h1>
-    <main>
-        <form action="" id="book">
+    <h1>Digital Library</h1>
+    <div class="side-panel">
+        <button id="open-modal">Open Modal</button>
+    </div>
+    <div id="myModal" class="modal">
+        <form action="" id="book" class="modal-content">
+            <span class="close">&times;</span>
             <div class="input-book">
                 <label for="title">Title</label>
                 <input type="text" name="title" id="title" >
@@ -31,14 +35,14 @@
             <button type="button" form="book" id="submit">Submit</button>
             <button type="button" id="test">TEST</button>
         </form>
-        <div class="display-library">
-                <div class="added-book">
-                    <div class="book-card">Title</div>
-                    <div class="book-card">Author</div>
-                    <div class="book-card">Amount of pages</div>
-                    <div class="book-card">Did you read it?</div>
-                </div>
-        </div>
-    </main>
+    </div>
+    <div class="display-library">
+            <div class="added-book">
+                <div class="book-card">Title</div>
+                <div class="book-card">Author</div>
+                <div class="book-card">Amount of pages</div>
+                <div class="book-card">Did you read it?</div>
+            </div>
+    </div>
 </body>
 </html>
